@@ -123,8 +123,16 @@
         $("#rediract_div").find("input:checked").each(function (i, ob) {
             type = $(ob).val();
         });
-        if(type=="0"){
+        if(type==0){
             window.location.assign('template.html')
+        }else{
+            if(type==1){
+                window.location.assign('email-reply.html')
+            }else{
+                if(type==2){
+                    window.location.assign('empty-template.html')
+                }
+            }
         }
     }
 </script>
