@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solution email template</title>
+
+    <link href="./template/hpi-favicon.ico" type="image/ico" rel="shortcut icon">
+    <link rel="stylesheet" href="./template/bootstrap.min.css">
+    <link rel="stylesheet" href="./template/font-awesome.min.css">
+    <link href="./template/hpi-favicon.ico" type="image/ico" rel="shortcut icon">
+    <script src="./template/jquery.min.js.download"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./template/popper.min.js.download"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="./template/bootstrap.min.js.download"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="./template/bootstrap-icons.css">
+    <script src="./template/clipboard.min.js.download"></script>
+    <link href="./template/select2.min.css" rel="stylesheet">
+    <script src="./template/select2.min.js.download"></script>
+    <link rel="stylesheet" href="./template/intlTelInput.css">
+
+    <script src="./template/intlTelInput-jquery.js.download"></script>
+
+</head>
+<body style="padding: 10px 30px;" class="">
+
+<div class="container-fluid">
+
+    <div class="card text-center">
+        <h4 class="card-header"><img src="./template/hpi-favicon.ico"><b> Solution email template</b></h4>
+        <div class="card-body">
+            <form id="form_template">
+                <div class="form-group">
+                    <div class="card bg-light">
+                        <div class="card-header" style="color: #0096D6;">
+                            <h4 class="mb-0">
+                                <b> Details :</b>
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5">
+
+
+                                    <div id="contact_name_div" class="form-group row">
+                                        <label for="name_txt" class="col-sm-4 col-form-label">Sender(s) Name :</label>
+                                        <div class="col-sm-8">
+                                            <input type="name" placeholder="Sender(s) Name" class="form-control"
+                                                   id="name_txt">
+                                        </div>
+                                    </div>
+                                    <div id="update_div" hidden="hidden">
+                                        <div class="form-group row">
+                                            <div class="form-check col-sm-6">
+                                                <input class="form-check-input" class="col-sm-2" type="radio"
+                                                       name="flexRadioDefault" id="update_radio1"
+                                                       value="Your case  has been  updated  with this new information :">
+                                                <br>
+                                                <label class="form-check-label" class="col-sm-4"
+                                                       for="update_radio1">
+                                                    Your case has been updated with this new information :
+                                                </label>
+                                            </div>
+                                            <div class="form-check col-sm-6">
+                                                <input class="form-check-input" class="col-sm-2" type="radio"
+                                                       name="flexRadioDefault"
+                                                       value="This information has been added to your case :"
+                                                       id="update_radio2">
+                                                <br>
+                                                <label class="form-check-label" class="col-sm-4"
+                                                       for="update_radio2">
+                                                    This information has been added to your case :
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="human_div">
+                                        <div class="form-group row">
+                                            <div class="form-check col-sm-4">
+                                                <input class="form-check-input" class="col-sm-2" type="checkbox"
+                                                       onclick="checkedbox(this.id)"
+                                                       name="flexRadioDefault" id="human1">
+                                                <br>
+                                                <label class="form-check-label" class="col-sm-4"
+                                                       for="human1">
+                                                    At the beginning
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="name" placeholder="At the beginning" class="form-control"
+                                                       id="human1_txt" hidden="hidden">
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="form-group row">
+
+                                            <div class="form-check col-sm-4">
+                                                <input class="form-check-input" class="col-sm-2" type="checkbox"
+                                                       onclick="checkedbox(this.id)"
+                                                       name="flexRadioDefault" id="human2">
+                                                <br>
+                                                <label class="form-check-label" class="col-sm-4"
+                                                       for="human2">
+                                                    At the end
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="name" placeholder="At the end" class="form-control"
+                                                       id="human2_txt" hidden="hidden">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group row" hidden="hidden">
+                                        <label for="RequestreceivedfromEmail"
+                                               class="col-sm-4 col-form-label">Email type : </label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control" id="RequestreceivedfromEmail"
+                                                    onchange="OnGradeChanged(this.value)">
+
+                                                <option value="email">Email request reply</option>
+                                                <option value="phone" selected="true">Phone request reply</option>
+                                                <option value="template">Template</option>
+                                                <option value="ATS">ATS critical case</option>
+                                                <option value="update">Case update</option>
+                                                <option value="close">Case closing</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="id_div" class="form-group row">
+                                        <label for="id_txt" class="col-sm-4 col-form-label">Case ID : </label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control"
+                                                   id="id_txt" placeholder="ID">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="offset-5 col-7">
+                                            <div class="btn-group">
+                                                <button onclick="modalReady()"
+                                                        type="button" class="btn btn-primary btn-sm"
+                                                        id="template_trigger" data-toggle="modal"
+                                                        data-target="#template_container"
+                                                        style="background-color: #0096D6;"
+                                                >
+                                                    Generate Template
+                                                </button>
+                                                <button class="btn btn-secondary btn-sm" onclick="resetForm()"
+                                                >
+                                                    Reset Fields
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div id="card2" class="card bg-light" hidden="hidden">
+                        <div class="card-header" style="color: #0096D6;">
+                            <h4 class="mb-0">
+                                <b> Template details :</b>
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div id="checkboxinput" class="row">
+                                <div class="col-6">
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="Contact_name" type="checkbox" class="form-check-input"
+                                                   name="check"
+                                                   value="Contact's name:" onchange="enableCheck(this.id)" >
+                                        </div>
+                                        <label for="Contact_name" class="col-sm-4  col-form-label">Contact name</label>
+                                        <input type="text" placeholder="" class="form-control col-sm-6" id="Contact_name_text" disabled>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="physical_adress" type="checkbox" class="form-check-input"
+                                                   name="check"
+                                                   value="Impacted Site physical address (with zip code):" onchange="enableCheck(this.id)">
+                                        </div>
+                                        <label for="physical_adress" class="col-sm-4  col-form-label">Impacted Site
+                                            physical address (with zip code)</label>
+                                        <input type="text" placeholder="" class="form-control col-sm-6" id="physical_adress_text" disabled>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="email_address" type="checkbox" class="form-check-input"
+                                                   name="check"
+                                                   value="Contact’s email address:" onchange="enableCheck(this.id)">
+                                        </div>
+                                        <label for="email_address" class="col-sm-4 col-form-label">Contact’s email
+                                            address</label>
+                                        <input type="text" placeholder="" class="form-control col-sm-6" id="email_address_text" disabled>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="phone_number" type="checkbox" class="form-check-input"
+                                                   name="check"
+                                                   value="Contact’s phone number:" onchange="enableCheck(this.id)">
+                                        </div>
+                                        <label for="phone_number" class="col-sm-4 col-form-label">Contact’s phone
+                                            number</label>
+                                        <input type="text" placeholder="" class="form-control col-sm-6" id="phone_number_text" disabled>
+                                    </div>
+
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="solution_name_checkbox" type="checkbox" class="form-check-input"
+                                                   name="check"
+                                                   value="Solution name:" onchange="enableCheck(this.id)">
+                                        </div>
+                                        <label for="solution_name_checkbox" class="col-sm-4 col-form-label">Solution
+                                            name</label>
+                                        <input type="text" placeholder="" class="form-control col-sm-6" id="solution_name_checkbox_text" disabled>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="solution_version_checkbox" type="checkbox"
+                                                   class="form-check-input" name="check"
+                                                   value="Solution version (if available):" onchange="enableCheck(this.id)">
+                                        </div>
+                                        <label for="solution_version_checkbox" class="col-sm-4 col-form-label">Solution
+                                            version (if available)</label>
+                                        <input type="text" placeholder="" class="form-control col-sm-6" id="solution_version_checkbox_text" disabled>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="Issue_description" type="checkbox" class="form-check-input"
+                                                   name="check"
+                                                   value="Issue description:" onchange="enableCheck(this.id)">
+                                        </div>
+                                        <label for="Issue_description" class="col-sm-4 col-form-label">Issue
+                                            description</label>
+                                        <input type="text" placeholder="" class="form-control col-sm-6" id="Issue_description_text" disabled>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="Printer_Firmware_version" type="checkbox"
+                                                   class="form-check-input" name="check"
+                                                   value="How would you describe this Issue/support event:<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Complete outage: All systems Printers/servers are completely down.<br/>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Major outage: Some devices are still operational, not completely down.<br/>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Standard issue:  Intermittent technical issues or questions regarding the device/solution.">
+                                        </div>
+                                        <label for="Printer_Firmware_version" class="col-sm-8 col-form-label">How would
+                                            you describe this Issue/support event</label>
+                                        <input type="text" placeholder="" text="" class="form-control col-sm-6" id="Printer_Firmware_version_text" disabled hidden="hidden">
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="Troubleshoot" type="checkbox" class="form-check-input"
+                                                   name="check"
+                                                   value="Troubleshoot done by the customer/partner:" onchange="enableCheck(this.id)">
+                                        </div>
+                                        <label for="Troubleshoot" class="col-sm-4 col-form-label">Troubleshoot done by
+                                            the
+                                            customer/partner</label>
+                                        <input type="text" placeholder="" class="form-control col-sm-6" id="Troubleshoot_text" disabled>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="card3" class="card bg-light" hidden="hidden">
+                        <div class="card-header" style="color: #0096D6;">
+                            <h4 class="mb-0">
+                                <b> Email details :</b>
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div id="checkboxinput1" class="row">
+                                <div class="col-6">
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="Contact_name1" type="checkbox" class="form-check-input"
+                                                   name="check"
+                                                   value="Contact's name:">
+                                        </div>
+                                        <label for="Contact_name1" class="col-sm-6  col-form-label">Contact name</label>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="physical_adress1" type="checkbox" class="form-check-input"
+                                                   name="check"
+                                                   value="Impacted Site physical address (with zip code):">
+                                        </div>
+                                        <label for="physical_adress1" class="col-sm-6  col-form-label">Impacted Site
+                                            physical address (with zip code)</label>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="email_address1" type="checkbox" class="form-check-input"
+                                                   name="check"
+                                                   value="Contact’s email address:">
+                                        </div>
+                                        <label for="email_address1" class="col-sm-6 col-form-label">Contact’s email
+                                            address</label>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="phone_number1" type="checkbox" class="form-check-input"
+                                                   name="check"
+                                                   value="Contact’s phone number:">
+                                        </div>
+                                        <label for="phone_number1" class="col-sm-6 col-form-label">Contact’s phone
+                                            number</label>
+                                    </div>
+
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="solution_name_checkbox1" type="checkbox" class="form-check-input"
+                                                   name="check"
+                                                   value="Solution name:">
+                                        </div>
+                                        <label for="solution_name_checkbox1" class="col-sm-6 col-form-label">Solution
+                                            name</label>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="solution_version_checkbox1" type="checkbox"
+                                                   class="form-check-input" name="check"
+                                                   value="Solution version (if available):">
+                                        </div>
+                                        <label for="solution_version_checkbox1" class="col-sm-6 col-form-label">Solution
+                                            version (if available)</label>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="Issue_description1" type="checkbox" class="form-check-input"
+                                                   name="check"
+                                                   value="Issue description:">
+                                        </div>
+                                        <label for="Issue_description1" class="col-sm-6 col-form-label">Issue
+                                            description</label>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="Printer_Firmware_version1" type="checkbox"
+                                                   class="form-check-input" name="check"
+                                                   value="How would you describe this Issue/support event:<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Complete outage: All systems Printers/servers are completely down.<br/>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Major outage: Some devices are still operational, not completely down.<br/>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Standard issue:  Intermittent technical issues or questions regarding the device/solution.">
+                                        </div>
+                                        <label for="Printer_Firmware_version1" class="col-sm-6 col-form-label">How would
+                                            you describe this Issue/support event</label>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-2">
+                                            <input id="Troubleshoot1" type="checkbox" class="form-check-input"
+                                                   name="check"
+                                                   value="Troubleshoot done by the customer/partner:">
+                                        </div>
+                                        <label for="Troubleshoot1" class="col-sm-6 col-form-label">Troubleshoot done by
+                                            the
+                                            customer/partner</label>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card4" class="card bg-light" hidden="hidden">
+                        <div class="card-header" style="color: #0096D6;">
+                            <h4 class="mb-0">
+                                <b> Severity details :</b>
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group row">
+
+                                        <label for="issue_describe_text" class="col-sm-4  col-form-label">How would you
+                                            describe this Issue/support event :</label>
+                                        <div class="col-sm-6">
+                                            <select class="form-control js-example-tags" id="issue_describe_text">
+                                                <option selected="" value="Issue severity : NA">NA</option>
+                                                <option value="Complete outage (Severity 1) : All systems Printers/servers are completely down.">
+                                                    Complete outage (Severity 1)
+                                                </option>
+                                                <option value="Major outage (Severity 2) : Some devices are still operational, not completely down.">
+                                                    Major outage (Severity 2)
+                                                </option>
+                                                <option value="Standard issue (Severity 3) : Intermittent technical issues or questions regarding the device/solution.">
+                                                    Standard issue (Severity 3)
+                                                </option>
+
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="additional_info" class="col-sm-4 col-form-label">Additional info
+                                            :</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" placeholder="Additional info" class="form-control"
+                                                   id="additional_info">
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+</div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- Modal -->
+<div class="modal fade" id="template_container" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="template_title">Flexworker| | | | </h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+
+            </div>
+            <div class="modal-body" id="template_data"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                <button type="button" onclick="CopyToClipboard('template_title')" class="btn btn-primary btn-sm">
+                    <i>
+                        <svg height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<g id="Text-files">
+	<path d="M53.9791489,9.1429005H50.010849c-0.0826988,0-0.1562004,0.0283995-0.2331009,0.0469999V5.0228
+		C49.7777481,2.253,47.4731483,0,44.6398468,0h-34.422596C7.3839517,0,5.0793519,2.253,5.0793519,5.0228v46.8432999
+		c0,2.7697983,2.3045998,5.0228004,5.1378999,5.0228004h6.0367002v2.2678986C16.253952,61.8274002,18.4702511,64,21.1954517,64
+		h32.783699c2.7252007,0,4.9414978-2.1725998,4.9414978-4.8432007V13.9861002
+		C58.9206467,11.3155003,56.7043495,9.1429005,53.9791489,9.1429005z M7.1110516,51.8661003V5.0228
+		c0-1.6487999,1.3938999-2.9909999,3.1062002-2.9909999h34.422596c1.7123032,0,3.1062012,1.3422,3.1062012,2.9909999v46.8432999
+		c0,1.6487999-1.393898,2.9911003-3.1062012,2.9911003h-34.422596C8.5049515,54.8572006,7.1110516,53.5149002,7.1110516,51.8661003z
+		 M56.8888474,59.1567993c0,1.550602-1.3055,2.8115005-2.9096985,2.8115005h-32.783699
+		c-1.6042004,0-2.9097996-1.2608986-2.9097996-2.8115005v-2.2678986h26.3541946
+		c2.8333015,0,5.1379013-2.2530022,5.1379013-5.0228004V11.1275997c0.0769005,0.0186005,0.1504021,0.0469999,0.2331009,0.0469999
+		h3.9682999c1.6041985,0,2.9096985,1.2609005,2.9096985,2.8115005V59.1567993z"/>
+    <path d="M38.6031494,13.2063999H16.253952c-0.5615005,0-1.0159006,0.4542999-1.0159006,1.0158005
+		c0,0.5615997,0.4544001,1.0158997,1.0159006,1.0158997h22.3491974c0.5615005,0,1.0158997-0.4542999,1.0158997-1.0158997
+		C39.6190491,13.6606998,39.16465,13.2063999,38.6031494,13.2063999z"/>
+    <path d="M38.6031494,21.3334007H16.253952c-0.5615005,0-1.0159006,0.4542999-1.0159006,1.0157986
+		c0,0.5615005,0.4544001,1.0159016,1.0159006,1.0159016h22.3491974c0.5615005,0,1.0158997-0.454401,1.0158997-1.0159016
+		C39.6190491,21.7877007,39.16465,21.3334007,38.6031494,21.3334007z"/>
+    <path d="M38.6031494,29.4603004H16.253952c-0.5615005,0-1.0159006,0.4543991-1.0159006,1.0158997
+		s0.4544001,1.0158997,1.0159006,1.0158997h22.3491974c0.5615005,0,1.0158997-0.4543991,1.0158997-1.0158997
+		S39.16465,29.4603004,38.6031494,29.4603004z"/>
+    <path d="M28.4444485,37.5872993H16.253952c-0.5615005,0-1.0159006,0.4543991-1.0159006,1.0158997
+		s0.4544001,1.0158997,1.0159006,1.0158997h12.1904964c0.5615025,0,1.0158005-0.4543991,1.0158005-1.0158997
+		S29.0059509,37.5872993,28.4444485,37.5872993z"/>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+</svg>
+                    </i>Copy Title
+                </button>
+                <button type="button" onclick="CopyToClipboard('template_data')" class="btn btn-primary btn-sm">
+                    <i>
+                        <svg height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<g id="Text-files">
+	<path d="M53.9791489,9.1429005H50.010849c-0.0826988,0-0.1562004,0.0283995-0.2331009,0.0469999V5.0228
+		C49.7777481,2.253,47.4731483,0,44.6398468,0h-34.422596C7.3839517,0,5.0793519,2.253,5.0793519,5.0228v46.8432999
+		c0,2.7697983,2.3045998,5.0228004,5.1378999,5.0228004h6.0367002v2.2678986C16.253952,61.8274002,18.4702511,64,21.1954517,64
+		h32.783699c2.7252007,0,4.9414978-2.1725998,4.9414978-4.8432007V13.9861002
+		C58.9206467,11.3155003,56.7043495,9.1429005,53.9791489,9.1429005z M7.1110516,51.8661003V5.0228
+		c0-1.6487999,1.3938999-2.9909999,3.1062002-2.9909999h34.422596c1.7123032,0,3.1062012,1.3422,3.1062012,2.9909999v46.8432999
+		c0,1.6487999-1.393898,2.9911003-3.1062012,2.9911003h-34.422596C8.5049515,54.8572006,7.1110516,53.5149002,7.1110516,51.8661003z
+		 M56.8888474,59.1567993c0,1.550602-1.3055,2.8115005-2.9096985,2.8115005h-32.783699
+		c-1.6042004,0-2.9097996-1.2608986-2.9097996-2.8115005v-2.2678986h26.3541946
+		c2.8333015,0,5.1379013-2.2530022,5.1379013-5.0228004V11.1275997c0.0769005,0.0186005,0.1504021,0.0469999,0.2331009,0.0469999
+		h3.9682999c1.6041985,0,2.9096985,1.2609005,2.9096985,2.8115005V59.1567993z"/>
+    <path d="M38.6031494,13.2063999H16.253952c-0.5615005,0-1.0159006,0.4542999-1.0159006,1.0158005
+		c0,0.5615997,0.4544001,1.0158997,1.0159006,1.0158997h22.3491974c0.5615005,0,1.0158997-0.4542999,1.0158997-1.0158997
+		C39.6190491,13.6606998,39.16465,13.2063999,38.6031494,13.2063999z"/>
+    <path d="M38.6031494,21.3334007H16.253952c-0.5615005,0-1.0159006,0.4542999-1.0159006,1.0157986
+		c0,0.5615005,0.4544001,1.0159016,1.0159006,1.0159016h22.3491974c0.5615005,0,1.0158997-0.454401,1.0158997-1.0159016
+		C39.6190491,21.7877007,39.16465,21.3334007,38.6031494,21.3334007z"/>
+    <path d="M38.6031494,29.4603004H16.253952c-0.5615005,0-1.0159006,0.4543991-1.0159006,1.0158997
+		s0.4544001,1.0158997,1.0159006,1.0158997h22.3491974c0.5615005,0,1.0158997-0.4543991,1.0158997-1.0158997
+		S39.16465,29.4603004,38.6031494,29.4603004z"/>
+    <path d="M28.4444485,37.5872993H16.253952c-0.5615005,0-1.0159006,0.4543991-1.0159006,1.0158997
+		s0.4544001,1.0158997,1.0159006,1.0158997h12.1904964c0.5615025,0,1.0158005-0.4543991,1.0158005-1.0158997
+		S29.0059509,37.5872993,28.4444485,37.5872993z"/>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+</svg>
+                    </i>Copy Template
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<p id="res"></p>
+
+<script>
+    document.getElementById("update_radio1").checked = true;
+
+    function enableCheck(valueid){
+        if (document.getElementById(valueid).checked == true) {
+            document.getElementById(valueid + "_text").disabled=false;
+        }else{
+            document.getElementById(valueid + "_text").disabled=true;
+            document.getElementById(valueid + "_text").value=null;
+        }
+    }
+
+    function checkedbox(valueid) {
+        if (document.getElementById(valueid).checked == true) {
+            document.getElementById(valueid + "_txt").hidden = false;
+        } else {
+            document.getElementById(valueid + "_txt").hidden = true;
+            document.getElementById(valueid + "_txt").value = null;
+        }
+    }
+
+
+    function OnGradeChanged(value) {
+        if (value == "template") {
+            document.getElementById("card2").hidden = false;
+            document.getElementById("id_div").hidden = true;
+        } else {
+            document.getElementById("card2").hidden = true;
+            document.getElementById("id_div").hidden = false;
+        }
+        if (value == "email") {
+            document.getElementById("card3").hidden = false;
+        } else {
+            document.getElementById("card3").hidden = true;
+        }
+
+        if (value == "email" || value == "phone") {
+            document.getElementById("human_div").hidden = false;
+        } else {
+            document.getElementById("human_div").hidden = true;
+        }
+        if (value == "ATS" ) {
+
+            if (value == "ATS") {
+                document.getElementById("card4").hidden = false;
+            } else {
+                document.getElementById("card4").hidden = true;
+            }
+
+            document.getElementById("contact_name_div").hidden = true;
+        } else {
+            document.getElementById("card4").hidden = true;
+
+            document.getElementById("contact_name_div").hidden = false;
+        }
+        if (value == "update") {
+            document.getElementById("update_div").hidden = false;
+
+        } else {
+            document.getElementById("update_div").hidden = true;
+        }
+
+
+    }
+
+    function CopyToClipboard(id) {
+        var r = document.createRange();
+        r.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        alert("Template has been copied")
+    }
+
+    function resetForm() {
+        document.getElementById("form_template").reset();
+        $(".select").val('').trigger('change')
+    }
+
+    function modalReady() {
+        document.getElementById("form_template")
+        setTitle()
+        setContent()
+    }
+
+    function setTitle() {
+        let case_title = ""
+        if (document.getElementById("RequestreceivedfromEmail").value == "email" || document.getElementById("RequestreceivedfromEmail").value == "phone") {
+            case_title += "Case : " + document.getElementById("id_txt").value + " has been created";
+        } else {
+            if (document.getElementById("RequestreceivedfromEmail").value == "template") {
+                case_title += "Information needed for case creation";
+            } else {
+                if (document.getElementById("RequestreceivedfromEmail").value == "close") {
+                    case_title += "Case : " + document.getElementById("id_txt").value + " has been closed";
+                } else {
+                    if (document.getElementById("RequestreceivedfromEmail").value == "update") {
+                        case_title += "Case : " + document.getElementById("id_txt").value + " has been updated";
+                    } else {
+                        if (document.getElementById("RequestreceivedfromEmail").value == "ATS") {
+                            case_title += "Critical case : " + document.getElementById("id_txt").value;
+                        } else {
+                            /*case_title += "WO/Creation for the case num : " + document.getElementById("id_txt").value;*/
+                        }
+                    }
+
+                }
+            }
+        }
+        $('#template_title').html(case_title)
+    }
+
+    function setContent() {
+        let template_content_value = "";
+        if (document.getElementById("RequestreceivedfromEmail").value == "email") {
+            var b = 0;
+            var emailextra = "Meantime, kindly provide us with below information: <br/><br/>";
+            $("#checkboxinput1").find("input:checked").each(function (i, ob) {
+                emailextra += "⦿ " + $(ob).val() + "<br><br>";
+                b = 1;
+            });
+
+            template_content_value += "Hello " + document.getElementById("name_txt").value +
+                "<br/>";
+
+            template_content_value += document.getElementById("human1_txt").value +
+                "<br/>";
+
+
+            template_content_value += "A case has been created under the ID number " + document.getElementById("id_txt").value +
+                " and elevated to L2 service engineer who will contact you as soon as possible.<br/>";
+            if (b == 1) {
+                template_content_value += emailextra +
+                    "<br/>";
+                template_content_value += document.getElementById("human2_txt").value +
+                    "<br/>";
+
+                template_content_value += "Wishing you a productive day ahead.";
+            } else {
+                template_content_value += document.getElementById("human2_txt").value +
+                    "<br/>" +
+                    "<br/>" +
+                    "Thank you for contacting our team.";
+            }
+
+
+        } else {
+            if (document.getElementById("RequestreceivedfromEmail").value == "phone") {
+                template_content_value += "Hello again " + document.getElementById("name_txt").value + ",<br/>" +
+                    "<br/>" +
+                    "Thank you for your previous call.<br/>" +
+
+
+                    document.getElementById("human1_txt").value +
+
+                    "<br/>" +
+
+                    "A case has been successfully created and elevated to our L2" +
+                    " service engineer team under the ID: " + document.getElementById("id_txt").value + " " +
+                    "<br/>" +
+                    "You will be contacted as soon as possible." +
+                    "<br/>" +
+                    "Please feel free to contact our team on our PDL: " +
+                    "printsolutions.support@hp.com for any future software solution-related " +
+                    "support event." +
+                    "<br/>" +
+
+                    document.getElementById("human2_txt").value +
+
+                    "<br/>" +
+
+                    "We’ll be happy to assist.";
+            } else {
+                if (document.getElementById("RequestreceivedfromEmail").value == "template") {
+                    template_content_value += "Hello " + document.getElementById("name_txt").value + "," +
+                        "<br/>" +
+                        "<br/>" +
+                        "In order to assist you properly please provide the following information." +
+                        "<br/>" +
+                        "<br/>";
+
+                    $("#checkboxinput").find("input:checked").each(function (i, ob) {
+
+                        template_content_value += "⦿ " + $(ob).val() + " " + document.getElementById($(ob).attr('id') + "_text").value + "<br><br>";
+
+
+                    });
+
+                } else {
+                    if (document.getElementById("RequestreceivedfromEmail").value == "close") {
+                        template_content_value += "Hello " + document.getElementById("name_txt").value + "," +
+                            "<br/>" +
+                            "<br/>" +
+                            "Hope you're doing well.<br/>" +
+                            "<br/>" +
+                            "The case: " + document.getElementById("id_txt").value + " has been closed.<br/>" +
+                            "<br/>" +
+                            "Thank you for your email.";
+
+                    } else {
+                        if (document.getElementById("RequestreceivedfromEmail").value == "update") {
+                            template_content_value += "Hello " + document.getElementById("name_txt").value + ",<br/>" +
+                                " <br/>" +
+                                " <br/>" +
+                                "Thank you for your response.<br/>"
+                            $("#update_div").find("input:checked").each(function (i, ob) {
+                                template_content_value += $(ob).val();
+                            });
+                            template_content_value += " " + document.getElementById("id_txt").value + " .<br/>" +
+                                " <br/>" +
+                                "<br/>" +
+                                "We remain at your disposal should you have any questions.";
+
+
+                        } else {
+                            if (document.getElementById("RequestreceivedfromEmail").value == "ATS") {
+                                template_content_value += "Hello Team,<br/>" +
+                                    "<br/>" +
+                                    "<br/>" +
+                                    "Please note that case " + document.getElementById("id_txt").value + " is critical and requires urgent action.<br/><br/>" +
+                                    document.getElementById("issue_describe_text").value;
+                                if (document.getElementById("additional_info").value != "") {
+                                    template_content_value += "<br/><br/>Additional info : " + document.getElementById("additional_info").value;
+                                }
+                                template_content_value += "<br/>" +
+                                    "<br/>" +
+                                    "Thank you in advance.";
+                            } else {
+                                /*template_content_value += "Hello,<br/>" +
+                                    " <br/>" +
+                                    "<br/>" +
+                                    "Hope you are doing well, <br/>" +
+                                    "could you please request a work order for a technician to troubleshoot <br/>" +
+                                    "the issue for this case  " + document.getElementById("id_txt").value + ".<br/>" +
+                                    "<br/>" +
+                                    " <br/>" +
+                                    "<br/>" +
+                                    "Thanks."*/
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        $('#template_data').html(template_content_value)
+    }
+
+</script>
+<link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+</body>
+</html>
