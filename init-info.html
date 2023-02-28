@@ -36,8 +36,7 @@
                     <div class="card bg-light">
                         <div class="card-header" style="color: #0096D6;">
                             <h4 class="mb-0">
-                                <b> Partner's contact details :<br>
-                                    (the person who has access to the server)</b>
+                                <b> Initial information :</b>
                             </h4>
                         </div>
                         <div class="card-body">
@@ -45,47 +44,85 @@
                                 <div class="col-6">
                                     <div id="type_div">
                                         <div class="form-group row">
-                                            <div class="form-check col-sm-6">
-                                                <input class="form-check-input" class="col-sm-2" type="radio"
-                                                       name="flexRadioDefault" id="ByPhone"
-                                                       value="0" checked>
-                                                <br>
-                                                <label class="form-check-label" class="col-sm-4"
-                                                       for="ByPhone">
-                                                    By Phone
-                                                </label>
-                                            </div>
-                                            <div class="form-check col-sm-6">
-                                                <input class="form-check-input" class="col-sm-2" type="radio"
-                                                       name="flexRadioDefault"
-                                                       value="1"
-                                                       id="ByPhone-Directed-to-email">
-                                                <br>
+                                            <div class="form-check col-6">
+                                                <table class="table">
+                                                    <tr>
+                                                        <td class="align-middle" style="border-color: transparent">
+                                                            <input class="form-check-input" class="col-sm-2" type="radio"
+                                                                   name="flexRadioDefault" id="ByPhone"
+                                                                   value="0" checked>
+                                                            <br>
+                                                        </td>
+                                                        <td class="text-left" style="border-color: transparent">
+                                                            <label class="form-check-label" style="font-size: 18px" class="col-sm-4"
+                                                                   for="ByPhone">
+                                                                By Phone
+                                                            </label>
+                                                        </td>
 
-                                                <label class="form-check-label" class="col-sm-4"
-                                                       for="ByPhone-Directed-to-email">
-                                                    By Phone Directed to email
-                                                </label>
+                                                    </tr>
+                                                </table>
+
+
                                             </div>
-                                            <div class="form-check col-sm-6">
-                                                <input class="form-check-input" class="col-sm-2" type="radio"
-                                                       name="flexRadioDefault" id="ByMail"
-                                                       value="2" checked>
-                                                <br>
-                                                <label class="form-check-label" class="col-sm-4"
-                                                       for="ByMail">
-                                                    By Mail
-                                                </label>
+                                            <div class="form-check col-6">
+                                                <table class="table">
+                                                    <tr>
+                                                        <td class="align-middle" style="border-color: transparent">
+                                                            <input class="form-check-input"  class="col-sm-2" type="radio"
+                                                                   name="flexRadioDefault"
+                                                                   value="1"
+                                                                   id="ByPhone-Directed-to-email">
+                                                            <br>
+                                                        </td>
+                                                        <td class="text-left" style="border-color: transparent">
+                                                            <label class="form-check-label" style="font-size: 18px" class="col-sm-4"
+                                                                   for="ByPhone-Directed-to-email">
+                                                                By Phone Directed to email
+                                                            </label>
+                                                        </td>
+
+                                                    </tr>
+                                                </table>
+
                                             </div>
-                                            <div class="form-check col-sm-6">
-                                                <input class="form-check-input" class="col-sm-2" type="radio"
-                                                       name="flexRadioDefault" id="ByQueue"
-                                                       value="3" checked>
-                                                <br>
-                                                <label class="form-check-label" class="col-sm-4"
-                                                       for="ByQueue">
-                                                    By Queue
-                                                </label>
+                                            <div class="form-check col-6">
+                                                <table class="table">
+                                                    <tr>
+                                                        <td class="align-middle" style="border-color: transparent">
+                                                            <input class="form-check-input" class="col-sm-2" type="radio"
+                                                                   name="flexRadioDefault" id="ByMail"
+                                                                   value="2" checked>
+                                                            <br>
+                                                        </td>
+                                                        <td class="text-left" style="border-color: transparent">
+                                                            <label class="form-check-label" style="font-size: 18px" class="col-sm-4"
+                                                                   for="ByMail">
+                                                                By Mail
+                                                            </label>
+                                                        </td>
+
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="form-check col-6">
+                                                <table class="table">
+                                                    <tr>
+                                                        <td class="align-middle" style="border-color: transparent">
+                                                            <input class="form-check-input" class="col-sm-2" type="radio"
+                                                                   name="flexRadioDefault" id="ByQueue"
+                                                                   value="3" checked>
+                                                            <br>
+                                                        </td>
+                                                        <td class="text-left" style="border-color: transparent">
+                                                            <label class="form-check-label" style="font-size: 18px" class="col-sm-4"
+                                                                   for="ByQueue">
+                                                                By Queue
+                                                            </label>
+                                                        </td>
+
+                                                    </tr>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
@@ -95,7 +132,7 @@
                                         <div class="offset-5 col-7">
                                             <div class="btn-group">
                                                 <button onclick="fromInitInfoTo()"
-                                                        type="button" class="btn btn-primary btn-sm"
+                                                        type="button" class="btn btn-primary"
                                                         style="background-color: #0096D6;"
                                                 >
                                                     Next
