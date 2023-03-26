@@ -21,11 +21,16 @@
     <script src="./template/intlTelInput-jquery.js.download"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+    </style>
 </head>
-<body style="padding: 10px 30px;" class="">
-
-<div class="container-fluid">
+<body  style="padding: 10px 30px;background-color: #f7fafa33;align-items: center;vertical-align: center;"
+       class="row justify-content-center align-self-center">
+<div class="container-fluid " style="vertical-align: center">
     <div class="card text-center">
         <h4 class="card-header"><img src="./template/hpi-favicon.ico"><b> My Solution Template Generator</b></h4>
         <div class="card-body">
@@ -44,17 +49,17 @@
                                 <div class="col-6">
                                     <div id="rediract_div">
                                         <div class="form-group row">
-                                            <div class="form-check col-sm-6">
+                                            <div class="form-check col-6">
                                                 <table class="table">
-                                                    <tr>
-                                                        <td class="align-middle" style="border-color: transparent">
-                                                            <input class="form-check-input" class="col-sm-2" type="radio"
+                                                    <tr class="justify-content-center">
+                                                        <td class="text-center" style="border-color: transparent;padding-top: 14px;padding-right: 6px">
+                                                            <input class="form-check-input" type="radio"
                                                                    name="flexRadioDefault" id="update_radio1"
                                                                    value="0" checked>
                                                             <br>
                                                         </td>
-                                                        <td class="text-left" style="border-color: transparent">
-                                                            <label class="form-check-label" style="font-size: 22px" class="col-4"
+                                                        <td class="text-left" style="border-color: transparent;padding-right: 4px">
+                                                            <label class="form-check-label" style="font-size: 22px"
                                                                    for="update_radio1">
                                                                 Case notes
                                                             </label>
@@ -62,22 +67,19 @@
 
                                                     </tr>
                                                 </table>
-
-
                                             </div>
-                                            <div class="form-check col-sm-6">
-
+                                            <div class="form-check col-6">
                                                 <table class="table">
-                                                    <tr>
-                                                        <td class="align-middle" style="border-color: transparent">
-                                                            <input class="form-check-input" class="col-sm-2" type="radio"
+                                                    <tr class="justify-content-center">
+                                                        <td class="text-center" style="border-color: transparent;padding-top: 14px;padding-right: 6px">
+                                                            <input class="form-check-input" type="radio"
                                                                    name="flexRadioDefault"
                                                                    value="1"
                                                                    id="update_radio2">
                                                             <br>
                                                         </td>
-                                                        <td class="text-left" style="border-color: transparent">
-                                                            <label class="form-check-label" style="font-size: 22px" class="col-4"
+                                                        <td class="text-left" style="border-color: transparent;padding-right: 4px">
+                                                            <label class="form-check-label" style="font-size: 22px"
                                                                    for="update_radio2">
                                                                 Email reply
                                                             </label>
@@ -85,24 +87,19 @@
 
                                                     </tr>
                                                 </table>
-
-
-
-
                                             </div>
-                                            <div class="form-check col-sm-6">
-
+                                            <div class="form-check col-6">
                                                 <table class="table">
-                                                    <tr>
-                                                        <td class="align-middle" style="border-color: transparent">
-                                                            <input class="form-check-input" class="col-sm-2" type="radio"
+                                                    <tr class="justify-content-center">
+                                                        <td class="text-center" style="border-color: transparent;padding-top: 14px;padding-right: 6px">
+                                                            <input class="form-check-input" type="radio"
                                                                    name="flexRadioDefault"
                                                                    value="2"
                                                                    id="update_radio3">
                                                             <br>
                                                         </td>
-                                                        <td class="text-left" style="border-color: transparent">
-                                                            <label class="form-check-label" style="font-size: 22px" class="col-4"
+                                                        <td class="text-left" style="border-color: transparent;padding-right: 4px">
+                                                            <label class="form-check-label" style="font-size: 22px"
                                                                    for="update_radio3">
                                                                 Empty template generator
                                                             </label>
@@ -110,18 +107,17 @@
 
                                                     </tr>
                                                 </table>
-
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-6 row justify-content-center align-self-center">
                                     <div class="form-group row">
-                                        <div class="offset-5 col-7">
+                                        <div class="col-7">
                                             <div class="btn-group">
                                                 <button onclick="fromByPhoneTo()"
                                                         type="button" class="btn btn-primary btn-lg"
-                                                        style="background-color: #0096D6;"
+                                                        style="background-color: #0096D6;width: 150px; height: 75px"
                                                 >
                                                     Next
                                                 </button>

@@ -21,18 +21,26 @@
     <script src="./template/intlTelInput-jquery.js.download"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-<style>
-    input[type=radio] {
-        width: 15px;
-        height: 15px;
-    }
-</style>
-</head>
-<body style="padding: 10px 30px;" class="">
+    <style>
+        input[type=radio] {
+            width: 15px;
+            height: 15px;
+        }
 
-<div class="container-fluid">
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+</head>
+<body style="padding: 10px 30px;background-color: #f7fafa33;align-items: center;vertical-align: center;"
+      class="row justify-content-center align-self-center">
+
+<div class="container-fluid" style="vertical-align: center">
     <div class="card text-center">
-        <h4 class="card-header"><img src="./template/hpi-favicon.ico"><b> My Solution Template Generator</b></h4>
+        <h4 class="card-header">
+            <img src="./template/hpi-favicon.ico"><b> My Solution Template Generator</b>
+        </h4>
         <div class="card-body">
             <form id="form_template">
                 <!--Details-->
@@ -41,74 +49,77 @@
                         <div class="card-header" style="color: #0096D6;">
                             <h4 class="mb-0">
                                 <b> In scope <br>OR<br> Not in scope :<br>
-                                    </b>
+                                </b>
                             </h4>
                         </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-6">
                                     <div id="scope_div">
-                                    <div class="form-group row">
-                                        <div class="form-check col-sm-6">
-                                            <table class="table">
-                                                <tr>
-                                                <td class="align-middle" style="border-color: transparent">
-                                                    <input class="form-check-input" class="col-sm-2" type="radio"
-                                                           name="flexRadioDefault" id="update_radio1"
-                                                           value="0" checked>
-                                                    <br>
-                                                </td>
-                                                <td class="text-left" style="border-color: transparent">
-                                                    <label class="form-check-label" style="font-size: 22px"  class="col-sm-4"
-                                                           for="update_radio1">
-                                                    In scope
-                                                </label>
-                                                 </td>
+                                        <div class="form-group row justify-content-center align-self-center" style="padding-top: 50px">
+                                            <div class="form-check col-sm-6">
+                                                <table class="table">
+                                                    <tr class="justify-content-center">
+                                                        <td class="align-middle" style="border-color: transparent">
+                                                            <input class="form-check-input" class="col-sm-2"
+                                                                   type="radio"
+                                                                   name="flexRadioDefault" id="update_radio1"
+                                                                   value="0" checked>
+                                                            <br>
+                                                        </td>
+                                                        <td class="text-left" style="border-color: transparent">
+                                                            <label class="form-check-label" style="font-size: 22px"
+                                                                   class="col-sm-4"
+                                                                   for="update_radio1">
+                                                                In scope
+                                                            </label>
+                                                        </td>
 
-                                                </tr>
-                                            </table>
+                                                    </tr>
+                                                </table>
 
 
+                                            </div>
+                                            <div class="form-check col-sm-6">
+                                                <table class="table">
+                                                    <tr class="justify-content-center">
+                                                        <td class="align-middle" style="border-color: transparent">
+                                                            <input class="form-check-input" class="col-sm-2"
+                                                                   type="radio"
+                                                                   name="flexRadioDefault"
+                                                                   value="1"
+                                                                   id="update_radio2">
+                                                            <br>
+                                                        </td>
+                                                        <td class="text-left" style="border-color: transparent">
+                                                            <label class="form-check-label" style="font-size: 22px"
+                                                                   class="col-sm-4"
+                                                                   for="update_radio2">
+                                                                Not in scope
+                                                            </label>
+                                                        </td>
+
+                                                    </tr>
+                                                </table>
+
+                                                <br>
+
+
+                                            </div>
                                         </div>
-                                        <div class="form-check col-sm-6">
-                                            <table class="table" >
-                                                <tr>
-                                                <td class="align-middle" style="border-color: transparent">
-                                                    <input class="form-check-input"  class="col-sm-2" type="radio"
-                                                           name="flexRadioDefault"
-                                                           value="1"
-                                                           id="update_radio2">
-                                                    <br>
-                                                </td>
-                                                <td class="text-left" style="border-color: transparent">
-                                                    <label class="form-check-label" style="font-size: 22px" class="col-sm-4"
-                                                           for="update_radio2">
-                                                        Not in scope
-                                                    </label>
-                                                </td>
-
-                                                </tr>
-                                            </table>
-
-                                            <br>
-
-
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-6 row justify-content-center align-self-center">
 
-                                    <div class="form-group row">
-                                        <div class="offset-5 col-7">
-                                            <div class="btn-group">
-                                                <button onclick="fromIndexTo()"
-                                                        type="button" class="btn btn-primary btn-lg"
-                                                        style="background-color: #0096D6;"
-                                                >
-                                                   Next
-                                                </button>
-                                            </div>
+
+                                    <div class="col-10">
+                                        <div class="btn-group">
+                                            <button onclick="fromIndexTo()"
+                                                    type="button" class="btn btn-primary btn-lg"
+                                                    style="background-color: #0096D6; width: 150px; height: 75px"
+                                            >
+                                                Next
+                                            </button>
                                         </div>
                                     </div>
 
@@ -135,14 +146,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 <script>
     function fromIndexTo() {
-        type=0
+        type = 0
         $("#scope_div").find("input:checked").each(function (i, ob) {
             type = $(ob).val();
         });
         console.log(type)
-        if(type==1){
+        if (type == 1) {
             window.location.assign('quick-case.html')
-        }else{
+        } else {
             window.location.assign('init-info.html')
         }
     }
