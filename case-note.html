@@ -589,7 +589,17 @@
                                             </select>
                                         </div>
                                     </div>
-
+                                    <div class="form-group row">
+                                        <label for="from-ats" class="col-sm-4 col-form-label">From
+                                            ATS:</label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control" id="from-ats">
+                                                <option selected="" disabled="" value="">Choose an option</option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="form-group row">
                                         <div class="offset-5 col-7">
                                             <div class="btn-group">
@@ -1018,7 +1028,8 @@
         let case_title ="ByPhone | "+document.getElementById("solution_name").value + ' | ' +
             document.getElementById("solution_version").value + ' | ' +
             document.getElementById("country").value + ' | ' +
-            document.getElementById("issue_desc").value
+            document.getElementById("issue_desc").value + ' | ' +
+            document.getElementById("from-ats").value
 
         $('#template_title').html(case_title)
     }
