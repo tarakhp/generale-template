@@ -52,7 +52,7 @@
                                         <label for="options" class="col-sm-2 col-form-label">Option:</label>
                                         <div class="col-sm-10">
                                             <select class="form-control" id="options">
-                                                <option value="Costumer instructed">Instructing the customer by providing the right path to reach their relevant support</option>
+                                                <option value="Customer instructed">Instructing the customer by providing the right path to reach their relevant support</option>
                                                 <option value="Call transfered to other teams">Transfer/route the call internally (through IVR) to the relevant support team</option>
                                                 <option value="Customer not oriented">Not having the ability to instruct the customer or to transfer their call</option>
                                             </select>
@@ -367,7 +367,7 @@
                                         <label for="ware" class="col-sm-2 col-form-label">HW/SW:</label>
                                         <div class="col-sm-10">
                                             <select class="form-control" id="ware">
-
+                                                <option selected="" value="">NA</option>
                                                 <option value="HW">HW</option>
                                                 <option value="SW">SW</option>
                                             </select>
@@ -379,11 +379,14 @@
                                         <div class="col-sm-10">
                                             <select class="form-control" id="type">
 
-                                                <option value="Consumer OOB">Consumer OOB</option>
-                                                <option value="Non HP Product">Non HP Product</option>
-                                                <option value="Graphic">Graphic</option>
-                                                <option value="Commercial computing">Commercial computing</option>
-                                                <option value="Commercial printing">Commercial printing</option>
+                                                <option value="Customer Referred">Customer Referred</option>
+                                                <option value="Generic - Special Project">Generic - Special Project</option>
+                                                <option value="HW/SW Inquiry">HW/SW Inquiry</option>
+                                                <option value="Logistics / Admin Support">Logistics / Admin Support</option>
+                                                <option value="Misroute">Misroute</option>
+                                                <option value="Misrouted Commercial / Consumer">Misrouted Commercial / Consumer</option>
+                                                <option value="No Product or Cust info / Contact disconnected">No Product or Cust info / Contact disconnected</option>
+                                                <option value="OOB/EOS/OOW Does not agree to pay">OOB/EOS/OOW Does not agree to pay</option>
                                             </select>
                                         </div>
 
@@ -523,7 +526,6 @@
 
     }
     function setTitleQuickCase() {
-        console.log(document.getElementById("options").value)
         let case_title =document.getElementById("options").value + ' | ' +
             document.getElementById("country").value +' | ' +
             document.getElementById("type").value +' | ' +
@@ -532,7 +534,20 @@
 
         $('#template_title').html(case_title)
     }
+    function CopyToClipboard(id) {
+        var r = document.createRange();
+        r.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        alert("Template has been copied")
+    }
 
+    function resetForm() {
+        document.getElementById("form_template").reset();
+        $(".select").val('').trigger('change')
+    }
 </script>
 </body>
 </html>
