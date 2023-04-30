@@ -69,7 +69,7 @@
                                     <div class="form-group row">
                                         <label for="country" class="col-sm-2 col-form-label">Country:</label>
                                         <div class="col-sm-10">
-                                            <select class="form-control" id="country">
+                                            <select class="form-control" id="country" onchange="setCountry()">
                                                 <option selected="" disabled="" value="">Choose an option</option>
                                                 <option value="Afghanistan">Afghanistan</option>
                                                 <option value="Aland Islands">Aland Islands</option>
@@ -600,6 +600,16 @@
                                             </select>
                                         </div>
                                     </div>
+                                    <div class="form-group row" hidden="hidden" id="german-lang-container">
+                                        <label for="german-lang" class="col-sm-4 col-form-label">Language :</label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control" id="german-lang">
+                                                <option selected="" disabled="" value="">Choose an option</option>
+                                                <option value="German">German</option>
+                                                <option value="English">English</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="form-group row">
                                         <div class="offset-5 col-7">
                                             <div class="btn-group">
@@ -785,6 +795,12 @@
 
 <script>
 
+    function setCountry() {
+        if(document.getElementById('country').value=="Germany" ||document.getElementById('country').value=="Austria" ||document.getElementById('country').value=="Switzerland" ){
+            document.getElementById('german-lang-container').hidden=false;
+
+        }
+    }
     function selectedchange(value) {
         if (value == "HP Access Control") {
             str = "<option selected=\"\">NA</option>" +
@@ -1060,7 +1076,10 @@
 
 
             "First Installation: " + document.getElementById("first_install").value + "<br/>" + "<br/>"
+        if(document.getElementById('country').value=="Germany" ||document.getElementById('country').value=="Austria" ||document.getElementById('country').value=="Switzerland" ){
+            template_content_value += "Language: " + document.getElementById('german-lang').value + "<br/>" + "<br/>"
 
+        }
 
         $('#template_data').html(template_content_value)
     }
