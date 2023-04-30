@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Solution Template Generator</title>
+
+    <link href="./template/hpi-favicon.ico" type="image/ico" rel="shortcut icon">
+    <link rel="stylesheet" href="./template/bootstrap.min.css">
+    <link rel="stylesheet" href="./template/font-awesome.min.css">
+    <link href="./template/hpi-favicon.ico" type="image/ico" rel="shortcut icon">
+
+    <script src="./template/popper.min.js.download"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="./template/bootstrap-icons.css">
+    <script src="./template/clipboard.min.js.download"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./template/intlTelInput.css">
+    <script src="./template/intlTelInput-jquery.js.download"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+</head>
+<body style="padding: 10px 30px;" class="">
+
+<div class="container-fluid">
+    <div class="card text-center">
+        <h4 class="card-header"><img src="./template/hpi-favicon.ico"><b> My Solution Template Generator</b></h4>
+        <div class="card-body">
+            <form id="form_template">
+                <!--Details-->
+                <div class="form-group">
+                    <div class="card bg-light">
+                        <div class="card-header" style="color: #0096D6;">
+                            <h4 class="mb-0">
+                                <b> Partner's contact details :<br>
+                                    (the person who has access to the server)</b>
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group row">
+                                        <label for="said_txt" class="col-sm-2 col-form-label">SAID:</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" placeholder="SAID" class="form-control"
+                                                   id="said_txt" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="name_txt" class="col-sm-2 col-form-label">Name:</label>
+                                        <div class="col-sm-10">
+                                            <input type="name" placeholder="Contact’s name" class="form-control"
+                                                   id="name_txt">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="email_txt" class="col-sm-2 col-form-label">Email:</label>
+                                        <div class="col-sm-10">
+                                            <input type="email" placeholder="Contact’s email" class="form-control"
+                                                   id="email_txt">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group row">
+                                        <label for="country" class="col-sm-2 col-form-label">Country:</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control" id="country">
+                                                <option selected="" disabled="" value="">Choose an option</option>
+                                                <option value="Afghanistan">Afghanistan</option>
+                                                <option value="Aland Islands">Aland Islands</option>
+                                                <option value="Albania">Albania</option>
+                                                <option value="Algeria">Algeria</option>
+                                                <option value="American Samoa">American Samoa</option>
+                                                <option value="Andorra">Andorra</option>
+                                                <option value="Angola">Angola</option>
+                                                <option value="Anguilla">Anguilla</option>
+                                                <option value="Antarctica">Antarctica</option>
+                                                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                                                <option value="Argentina">Argentina</option>
+                                                <option value="Armenia">Armenia</option>
+                                                <option value="Aruba">Aruba</option>
+                                                <option value="Australia">Australia</option>
+                                                <option value="Austria">Austria</option>
+                                                <option value="Azerbaijan">Azerbaijan</option>
+                                                <option value="Bahamas">Bahamas</option>
+                                                <option value="Bahrain">Bahrain</option>
+                                                <option value="Bangladesh">Bangladesh</option>
+                                                <option value="Barbados">Barbados</option>
+                                                <option value="Belarus">Belarus</option>
+                                                <option value="Belgium">Belgium</option>
+                                                <option value="Belize">Belize</option>
+                                                <option value="Benin">Benin</option>
+                                                <option value="Bermuda">Bermuda</option>
+                                                <option value="Bhutan">Bhutan</option>
+                                                <option value="Bolivia">Bolivia</option>
+                                                <option value="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius
+                                                    and Saba
+                                                </option>
+                                                <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                                                <option value="Botswana">Botswana</option>
+                                                <option value="Bouvet Island">Bouvet Island</option>
+                                                <option value="Brazil">Brazil</option>
+                                                <option value="British Indian Ocean Territory">British Indian Ocean
+                                                    Territory
+                                                </option>
+                                                <option value="Brunei Darussalam">Brunei Darussalam</option>
+                                                <option value="Bulgaria">Bulgaria</option>
+                                                <option value="Burkina Faso">Burkina Faso</option>
+                                                <option value="Burundi">Burundi</option>
+                                                <option value="Cambodia">Cambodia</option>
+                                                <option value="Cameroon">Cameroon</option>
+                                                <option value="Canada">Canada</option>
+                                                <option value="Cape Verde">Cape Verde</option>
+                                                <option value="Cayman Islands">Cayman Islands</option>
+                                                <option value="Central African Republic">Central African Republic
+                                                </option>
+                                                <option value="Chad">Chad</option>
+                                                <option value="Chile">Chile</option>
+                                                <option value="China">China</option>
+                                                <option value="Christmas Island">Christmas Island</option>
+                                                <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                                                <option value="Colombia">Colombia</option>
+                                                <option value="Comoros">Comoros</option>
+                                                <option value="Congo">Congo</option>
+                                                <option value="Congo, Democratic Republic of the Congo">Congo,
+                                                    Democratic Republic of the Congo
+                                                </option>
+                                                <option value="Cook Islands">Cook Islands</option>
+                                                <option value="Costa Rica">Costa Rica</option>
+                                                <option value="Cote D'Ivoire">Cote D'Ivoire</option>
+                                                <option value="Croatia">Croatia</option>
+                                                <option value="Cuba">Cuba</option>
+                                                <option value="Curacao">Curacao</option>
+                                                <option value="Cyprus">Cyprus</option>
+                                                <option value="Czech Republic">Czech Republic</option>
+                                                <option value="Denmark">Denmark</option>
+                                                <option value="Djibouti">Djibouti</option>
+                                                <option value="Dominica">Dominica</option>
+                                                <option value="Dominican Republic">Dominican Republic</option>
+                                                <option value="Ecuador">Ecuador</option>
+                                                <option value="Egypt">Egypt</option>
+                                                <option value="El Salvador">El Salvador</option>
+                                                <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                                <option value="Eritrea">Eritrea</option>
+                                                <option value="Estonia">Estonia</option>
+                                                <option value="Ethiopia">Ethiopia</option>
+                                                <option value="Falkland Islands (Malvinas)">Falkland Islands
+                                                    (Malvinas)
+                                                </option>
+                                                <option value="Faroe Islands">Faroe Islands</option>
+                                                <option value="Fiji">Fiji</option>
+                                                <option value="Finland">Finland</option>
+                                                <option value="France">France</option>
+                                                <option value="French Guiana">French Guiana</option>
+                                                <option value="French Polynesia">French Polynesia</option>
+                                                <option value="French Southern Territories">French Southern
+                                                    Territories
+                                                </option>
+                                                <option value="Gabon">Gabon</option>
+                                                <option value="Gambia">Gambia</option>
+                                                <option value="Georgia">Georgia</option>
+                                                <option value="Germany">Germany</option>
+                                                <option value="Ghana">Ghana</option>
+                                                <option value="Gibraltar">Gibraltar</option>
+                                                <option value="Greece">Greece</option>
+                                                <option value="Greenland">Greenland</option>
+                                                <option value="Grenada">Grenada</option>
+                                                <option value="Guadeloupe">Guadeloupe</option>
+                                                <option value="Guam">Guam</option>
+                                                <option value="Guatemala">Guatemala</option>
+                                                <option value="Guernsey">Guernsey</option>
+                                                <option value="Guinea">Guinea</option>
+                                                <option value="Guinea-Bissau">Guinea-Bissau</option>
+                                                <option value="Guyana">Guyana</option>
+                                                <option value="Haiti">Haiti</option>
+                                                <option value="Heard Island and Mcdonald Islands">Heard Island and
+                                                    Mcdonald Islands
+                                                </option>
+                                                <option value="Holy See (Vatican City State)">Holy See (Vatican City
+                                                    State)
+                                                </option>
+                                                <option value="Honduras">Honduras</option>
+                                                <option value="Hong Kong">Hong Kong</option>
+                                                <option value="Hungary">Hungary</option>
+                                                <option value="Iceland">Iceland</option>
+                                                <option value="India">India</option>
+                                                <option value="Indonesia">Indonesia</option>
+                                                <option value="Iran, Islamic Republic of">Iran, Islamic Republic of
+                                                </option>
+                                                <option value="Iraq">Iraq</option>
+                                                <option value="Ireland">Ireland</option>
+                                                <option value="Isle of Man">Isle of Man</option>
+                                                <option value="Israel">Israel</option>
+                                                <option value="Italy">Italy</option>
+                                                <option value="Jamaica">Jamaica</option>
+                                                <option value="Japan">Japan</option>
+                                                <option value="Jersey">Jersey</option>
+                                                <option value="Jordan">Jordan</option>
+                                                <option value="Kazakhstan">Kazakhstan</option>
+                                                <option value="Kenya">Kenya</option>
+                                                <option value="Kiribati">Kiribati</option>
+                                                <option value="Korea, Democratic People's Republic of">Korea, Democratic
+                                                    People's Republic of
+                                                </option>
+                                                <option value="Korea, Republic of">Korea, Republic of</option>
+                                                <option value="Kosovo">Kosovo</option>
+                                                <option value="Kuwait">Kuwait</option>
+                                                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                                <option value="Lao People's Democratic Republic">Lao People's Democratic
+                                                    Republic
+                                                </option>
+                                                <option value="Latvia">Latvia</option>
+                                                <option value="Lebanon">Lebanon</option>
+                                                <option value="Lesotho">Lesotho</option>
+                                                <option value="Liberia">Liberia</option>
+                                                <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                                                <option value="Liechtenstein">Liechtenstein</option>
+                                                <option value="Lithuania">Lithuania</option>
+                                                <option value="Luxembourg">Luxembourg</option>
+                                                <option value="Macao">Macao</option>
+                                                <option value="Macedonia, the Former Yugoslav Republic of">Macedonia,
+                                                    the Former Yugoslav Republic of
+                                                </option>
+                                                <option value="Madagascar">Madagascar</option>
+                                                <option value="Malawi">Malawi</option>
+                                                <option value="Malaysia">Malaysia</option>
+                                                <option value="Maldives">Maldives</option>
+                                                <option value="Mali">Mali</option>
+                                                <option value="Malta">Malta</option>
+                                                <option value="Marshall Islands">Marshall Islands</option>
+                                                <option value="Martinique">Martinique</option>
+                                                <option value="Mauritania">Mauritania</option>
+                                                <option value="Mauritius">Mauritius</option>
+                                                <option value="Mayotte">Mayotte</option>
+                                                <option value="Mexico">Mexico</option>
+                                                <option value="Micronesia, Federated States of">Micronesia, Federated
+                                                    States of
+                                                </option>
+                                                <option value="Moldova, Republic of">Moldova, Republic of</option>
+                                                <option value="Monaco">Monaco</option>
+                                                <option value="Mongolia">Mongolia</option>
+                                                <option value="Montenegro">Montenegro</option>
+                                                <option value="Montserrat">Montserrat</option>
+                                                <option value="Morocco">Morocco</option>
+                                                <option value="Mozambique">Mozambique</option>
+                                                <option value="Myanmar">Myanmar</option>
+                                                <option value="Namibia">Namibia</option>
+                                                <option value="Nauru">Nauru</option>
+                                                <option value="Nepal">Nepal</option>
+                                                <option value="Netherlands">Netherlands</option>
+                                                <option value="Netherlands Antilles">Netherlands Antilles</option>
+                                                <option value="New Caledonia">New Caledonia</option>
+                                                <option value="New Zealand">New Zealand</option>
+                                                <option value="Nicaragua">Nicaragua</option>
+                                                <option value="Niger">Niger</option>
+                                                <option value="Nigeria">Nigeria</option>
+                                                <option value="Niue">Niue</option>
+                                                <option value="Norfolk Island">Norfolk Island</option>
+                                                <option value="Northern Mariana Islands">Northern Mariana Islands
+                                                </option>
+                                                <option value="Norway">Norway</option>
+                                                <option value="Oman">Oman</option>
+                                                <option value="Pakistan">Pakistan</option>
+                                                <option value="Palau">Palau</option>
+                                                <option value="Palestinian Territory, Occupied">Palestinian Territory,
+                                                    Occupied
+                                                </option>
+                                                <option value="Panama">Panama</option>
+                                                <option value="Papua New Guinea">Papua New Guinea</option>
+                                                <option value="Paraguay">Paraguay</option>
+                                                <option value="Peru">Peru</option>
+                                                <option value="Philippines">Philippines</option>
+                                                <option value="Pitcairn">Pitcairn</option>
+                                                <option value="Poland">Poland</option>
+                                                <option value="Portugal">Portugal</option>
+                                                <option value="Puerto Rico">Puerto Rico</option>
+                                                <option value="Qatar">Qatar</option>
+                                                <option value="Reunion">Reunion</option>
+                                                <option value="Romania">Romania</option>
+                                                <option value="Russian Federation">Russian Federation</option>
+                                                <option value="Rwanda">Rwanda</option>
+                                                <option value="Saint Barthelemy">Saint Barthelemy</option>
+                                                <option value="Saint Helena">Saint Helena</option>
+                                                <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                                                <option value="Saint Lucia">Saint Lucia</option>
+                                                <option value="Saint Martin">Saint Martin</option>
+                                                <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon
+                                                </option>
+                                                <option value="Saint Vincent and the Grenadines">Saint Vincent and the
+                                                    Grenadines
+                                                </option>
+                                                <option value="Samoa">Samoa</option>
+                                                <option value="San Marino">San Marino</option>
+                                                <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                                                <option value="Saudi Arabia">Saudi Arabia</option>
+                                                <option value="Senegal">Senegal</option>
+                                                <option value="Serbia">Serbia</option>
+                                                <option value="Serbia and Montenegro">Serbia and Montenegro</option>
+                                                <option value="Seychelles">Seychelles</option>
+                                                <option value="Sierra Leone">Sierra Leone</option>
+                                                <option value="Singapore">Singapore</option>
+                                                <option value="Sint Maarten">Sint Maarten</option>
+                                                <option value="Slovakia">Slovakia</option>
+                                                <option value="Slovenia">Slovenia</option>
+                                                <option value="Solomon Islands">Solomon Islands</option>
+                                                <option value="Somalia">Somalia</option>
+                                                <option value="South Africa">South Africa</option>
+                                                <option value="South Georgia and the South Sandwich Islands">South
+                                                    Georgia and the South Sandwich Islands
+                                                </option>
+                                                <option value="South Sudan">South Sudan</option>
+                                                <option value="Spain">Spain</option>
+                                                <option value="Sri Lanka">Sri Lanka</option>
+                                                <option value="Sudan">Sudan</option>
+                                                <option value="Suriname">Suriname</option>
+                                                <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                                                <option value="Swaziland">Swaziland</option>
+                                                <option value="Sweden">Sweden</option>
+                                                <option value="Switzerland">Switzerland</option>
+                                                <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                                                <option value="Taiwan, Province of China">Taiwan, Province of China
+                                                </option>
+                                                <option value="Tajikistan">Tajikistan</option>
+                                                <option value="Tanzania, United Republic of">Tanzania, United Republic
+                                                    of
+                                                </option>
+                                                <option value="Thailand">Thailand</option>
+                                                <option value="Timor-Leste">Timor-Leste</option>
+                                                <option value="Togo">Togo</option>
+                                                <option value="Tokelau">Tokelau</option>
+                                                <option value="Tonga">Tonga</option>
+                                                <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                                                <option value="Tunisia">Tunisia</option>
+                                                <option value="Turkey">Turkey</option>
+                                                <option value="Turkmenistan">Turkmenistan</option>
+                                                <option value="Turks and Caicos Islands">Turks and Caicos Islands
+                                                </option>
+                                                <option value="Tuvalu">Tuvalu</option>
+                                                <option value="Uganda">Uganda</option>
+                                                <option value="Ukraine">Ukraine</option>
+                                                <option value="United Arab Emirates">United Arab Emirates</option>
+                                                <option value="United Kingdom">United Kingdom</option>
+                                                <option value="United States">United States</option>
+                                                <option value="United States Minor Outlying Islands">United States Minor
+                                                    Outlying Islands
+                                                </option>
+                                                <option value="Uruguay">Uruguay</option>
+                                                <option value="Uzbekistan">Uzbekistan</option>
+                                                <option value="Vanuatu">Vanuatu</option>
+                                                <option value="Venezuela">Venezuela</option>
+                                                <option value="Viet Nam">Viet Nam</option>
+                                                <option value="Virgin Islands, British">Virgin Islands, British</option>
+                                                <option value="Virgin Islands, U.s.">Virgin Islands, U.s.</option>
+                                                <option value="Wallis and Futuna">Wallis and Futuna</option>
+                                                <option value="Western Sahara">Western Sahara</option>
+                                                <option value="Yemen">Yemen</option>
+                                                <option value="Zambia">Zambia</option>
+                                                <option value="Zimbabwe">Zimbabwe</option>
+
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="phone_txt" class="col-sm-2 col-form-label">Phone:</label>
+                                        <div class="col-sm-10">
+                                            <input type="tel" class="form-control" id="phone_txt"
+                                                   autocomplete="on" placeholder="contact’s phone number">
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Troubleshoot-->
+                <div class="form-group">
+                    <div class="card bg-light">
+                        <div class="card-header" style="color: #0096D6;">
+                            <h4 class="mb-0">
+                                <b>Troubleshoot</b>
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="form-group row">
+                                        <label for="solution_name" class="col-sm-4 col-form-label">Solution
+                                            Name:</label>
+                                        <div class="col-sm-8">
+                                            <select onchange="selectedchange(this.value)"
+                                                    class="form-control js-example-basic-single" id="solution_name">
+                                                <option selected="" value="">NA</option>
+                                                <option>Accuroute</option>
+                                                <option>AutoStore</option>
+                                                <option>Badge Reader</option>
+                                                <option>Celiveo</option>
+                                                <option>Connectivity</option>
+                                                <option>DCC</option>
+                                                <option>DSS</option>
+                                                <option>E-print Enterprise</option>
+                                                <option>Equitrac</option>
+                                                <option>Everyone Print</option>
+                                                <option>Genius Bytes</option>
+                                                <option>HP Access Control</option>
+                                                <option>HP Advance</option>
+                                                <option>HP Capture and Route</option>
+                                                <option>HP Jet Advantage Secure Print & Insights</option>
+                                                <option>HP JetAdvantage Security Manager</option>
+                                                <option>HP PrinterOn</option>
+                                                <option>HP Roam</option>
+                                                <option>HP UPD</option>
+                                                <option>HP Web Jetadmin</option>
+                                                <option>Kofax</option>
+                                                <option>LRS MFPsecure</option>
+                                                <option>LRS VPSX</option>
+                                                <option>MYQ</option>
+                                                <option>Other</option>
+                                                <option>Paper Cut</option>
+                                                <option>Pharos</option>
+                                                <option>SafeCom</option>
+                                                <option>Troy</option>
+                                                <option>WorkPath</option>
+                                                <option>Ysoft</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="solution_version" class="col-sm-4 col-form-label">Solution Version
+                                            (if available):</label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control js-example-tags" id="solution_version">
+                                                <option selected="">NA</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="version_type_txt"
+                                               class="col-sm-4 col-form-label">Technology:</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" id="version_type_txt" class="form-control" value="NA"
+                                                   disabled="disabled">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="issue_desc" class="col-sm-4 col-form-label"
+                                               data-select2-id="select2-data-6-u6dz">Issue Description :</label>
+                                        <div class="col-sm-8">
+                                            <select id="issue_desc" class="form-control js-example-tags">
+                                                <option selected="" value="">Choose an option</option>
+                                                <option>49.xx.xx (Any solution)</option>
+                                                <option>802.1X authentication</option>
+                                                <option>Admin Console Credentials (Any solution)</option>
+                                                <option>Application/Application Service Crash</option>
+                                                <option>Badge reader (Any solution)</option>
+                                                <option>Cannot launch WJA client (WJA ONLY)</option>
+                                                <option>Cipher Suites (Any Solution)</option>
+                                                <option>Configuration (Any Solution)</option>
+                                                <option>Dash board not loading. (HP Print and Insights)</option>
+                                                <option>Data collection SNMP proxy agent with USB printers. (WJA ONLY)
+                                                </option>
+                                                <option>Database connection problem</option>
+                                                <option>Device Announcement (HP Security Manager)</option>
+                                                <option>Device communication error (Any solution)</option>
+                                                <option>Device Discovery (WJA ONLY)</option>
+                                                <option>Driver Configuration (Pull Printing Solution)</option>
+                                                <option>Duplicate (2 cases for the same issue/customer)</option>
+                                                <option>Firmware (Any solution)</option>
+                                                <option>HP Linux Imaging and Printing</option>
+                                                <option>HPAC admin console (HPAC Only)</option>
+                                                <option>HPAC Client Console (HPAC Only)</option>
+                                                <option>HPWSProAdapter not running (WJA Only)</option>
+                                                <option>Informational (Any solution)</option>
+                                                <option>Innovate Audit (HP Advance Only)</option>
+                                                <option>Installation/Upgrade/Migration Services (Any solution)</option>
+                                                <option>Instant-On (HPSM ONLY)</option>
+                                                <option>IPV6 (Any Solution)</option>
+                                                <option>Jetmobile BarDIMM Pro (Celiveo)</option>
+                                                <option>Job Accounting (HPAC Only)</option>
+                                                <option>Miss Route (Any solution)</option>
+                                                <option>Mobile Connector (HPAC only)</option>
+                                                <option>Multiple issues (Any solution)</option>
+                                                <option>NLB Configuration (Any Solution)</option>
+                                                <option>No Fix (Any Solution)</option>
+                                                <option>OCR configuration (DSS - Firmware)</option>
+                                                <option>Other (Any solution)</option>
+                                                <option>Out of Memory (HPSM and WJA)</option>
+                                                <option>Pages missing from print job (Pull Printing Solution)</option>
+                                                <option>Pages printing in incorrect order (Pull Printing Solution)
+                                                </option>
+                                                <option>Performance (Any Solution)</option>
+                                                <option>Print Client (HPAC Only)</option>
+                                                <option>Problems with reports (WJA ONLY)</option>
+                                                <option>Quota (HPAC - SafeCom)</option>
+                                                <option>Rules and Printing Policies (HPAC Only)</option>
+                                                <option>Scan to email/Folder not working (Scan solutions)</option>
+                                                <option>Security Certificate (Any Solution)</option>
+                                                <option>Security Policy (HP Security Manager)</option>
+                                                <option>Security vulnerabilities with TLS/SSL (Any Solution)</option>
+                                                <option>Server License issue (Any Solution)</option>
+                                                <option>Severity One (Any Solution)</option>
+                                                <option>Slow printing (Pull Printing Solution)</option>
+                                                <option>SQL - Database Configuration (Any Solution)</option>
+                                                <option>Template Configuration (WJA ONLY)</option>
+                                                <option>The current product configuration is unlicensed. (HPAC Only)
+                                                </option>
+                                                <option>Third Party Team fixed issue</option>
+                                                <option>Unable to authenticate into printer (Any solution)</option>
+                                                <option>Unable to deploy print/insight scout (HP Print and Insights)
+                                                </option>
+                                                <option>Unable to install agent into printer (HPAC, SafeCom, PaperCut)
+                                                </option>
+                                                <option>Unable to install Workflow into printer (DSS)</option>
+                                                <option>Unable to process file (Pull Printing Solution)</option>
+                                                <option>Unable to purge (Pull Printing Solution)</option>
+                                                <option>Unable to release jobs (Pull Printing Solution)</option>
+                                                <option>Unable to remediate printers (HPSM ONLY)</option>
+                                                <option>Unable to send alerts over email (HPSM ONLY)</option>
+                                                <option>Unable to send code over email (HPAC ONLY)</option>
+                                                <option>Unable to submit file to print (Pull Printing Solution)</option>
+                                                <option>Virus Attack (Any Solution)</option>
+                                                <option>Windows Update (Any Solution)</option>
+                                                <option>WJA Alerts (WJA ONLY)</option>
+                                                <option>XTP Tickets (WJA Solution)</option>
+
+
+                                            </select>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="printer_txt" class="col-sm-4 col-form-label">Printer (if
+                                            available):</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" id="printer_txt" class="form-control" value="NA">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="fw_version" class="col-sm-4 col-form-label">Issue severity :</label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control js-example-tags" id="fw_version">
+                                                <option selected="" value="Issue severity : NA">NA</option>
+                                                <option value="Complete outage (Severity 1) : All systems Printers/servers are completely down.">
+                                                    Complete outage (Severity 1)
+                                                </option>
+                                                <option value="Major outage (Severity 2) : Some devices are still operational, not completely down.">
+                                                    Major outage (Severity 2)
+                                                </option>
+                                                <option value="Standard issue (Severity 3) : Intermittent technical issues or questions regarding the device/solution.">
+                                                    Standard issue (Severity 3)
+                                                </option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="form-group row">
+                                        <label for="troubleshoot" class="col-sm-4 col-form-label">Troubleshoot done by
+                                            the Customer/Partner:
+                                        </label>
+                                        <div class="col-sm-8">
+                                             <textarea id="troubleshoot" name="textarea" cols="40" rows="5"
+                                                       class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="first_install" class="col-sm-4 col-form-label">First
+                                            Installation:</label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control" id="first_install">
+                                                <option selected="" disabled="" value="">Choose an option</option>
+                                                <option value="Yes first installation">Yes first installation</option>
+                                                <option value="No everything was working fine before this issue">No everything was working fine before this issue</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="from-ats" class="col-sm-4 col-form-label">From
+                                            ATS:</label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control" id="from-ats">
+                                                <option selected="" disabled="" value="">Choose an option</option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="offset-5 col-7">
+                                            <div class="btn-group">
+                                                <button onclick="modalReady()"
+                                                        type="button" class="btn btn-primary btn-lg"
+                                                        id="template_trigger" data-toggle="modal"
+                                                        data-target="#template_container"
+                                                        style="background-color: #0096D6;"
+                                                >
+                                                    Generate Template
+                                                </button>
+                                                <button class="btn btn-secondary btn-lg" onclick="resetForm()"
+                                                >
+                                                    Reset Fields
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="template_container" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="template_title">Flexworker| | | | </h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+
+            </div>
+            <div class="modal-body" id="template_data"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
+                <button type="button" onclick="CopyToClipboard('template_title')" class="btn btn-primary btn-lg">
+                    <i>
+                        <svg height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<g id="Text-files">
+	<path d="M53.9791489,9.1429005H50.010849c-0.0826988,0-0.1562004,0.0283995-0.2331009,0.0469999V5.0228
+		C49.7777481,2.253,47.4731483,0,44.6398468,0h-34.422596C7.3839517,0,5.0793519,2.253,5.0793519,5.0228v46.8432999
+		c0,2.7697983,2.3045998,5.0228004,5.1378999,5.0228004h6.0367002v2.2678986C16.253952,61.8274002,18.4702511,64,21.1954517,64
+		h32.783699c2.7252007,0,4.9414978-2.1725998,4.9414978-4.8432007V13.9861002
+		C58.9206467,11.3155003,56.7043495,9.1429005,53.9791489,9.1429005z M7.1110516,51.8661003V5.0228
+		c0-1.6487999,1.3938999-2.9909999,3.1062002-2.9909999h34.422596c1.7123032,0,3.1062012,1.3422,3.1062012,2.9909999v46.8432999
+		c0,1.6487999-1.393898,2.9911003-3.1062012,2.9911003h-34.422596C8.5049515,54.8572006,7.1110516,53.5149002,7.1110516,51.8661003z
+		 M56.8888474,59.1567993c0,1.550602-1.3055,2.8115005-2.9096985,2.8115005h-32.783699
+		c-1.6042004,0-2.9097996-1.2608986-2.9097996-2.8115005v-2.2678986h26.3541946
+		c2.8333015,0,5.1379013-2.2530022,5.1379013-5.0228004V11.1275997c0.0769005,0.0186005,0.1504021,0.0469999,0.2331009,0.0469999
+		h3.9682999c1.6041985,0,2.9096985,1.2609005,2.9096985,2.8115005V59.1567993z"/>
+    <path d="M38.6031494,13.2063999H16.253952c-0.5615005,0-1.0159006,0.4542999-1.0159006,1.0158005
+		c0,0.5615997,0.4544001,1.0158997,1.0159006,1.0158997h22.3491974c0.5615005,0,1.0158997-0.4542999,1.0158997-1.0158997
+		C39.6190491,13.6606998,39.16465,13.2063999,38.6031494,13.2063999z"/>
+    <path d="M38.6031494,21.3334007H16.253952c-0.5615005,0-1.0159006,0.4542999-1.0159006,1.0157986
+		c0,0.5615005,0.4544001,1.0159016,1.0159006,1.0159016h22.3491974c0.5615005,0,1.0158997-0.454401,1.0158997-1.0159016
+		C39.6190491,21.7877007,39.16465,21.3334007,38.6031494,21.3334007z"/>
+    <path d="M38.6031494,29.4603004H16.253952c-0.5615005,0-1.0159006,0.4543991-1.0159006,1.0158997
+		s0.4544001,1.0158997,1.0159006,1.0158997h22.3491974c0.5615005,0,1.0158997-0.4543991,1.0158997-1.0158997
+		S39.16465,29.4603004,38.6031494,29.4603004z"/>
+    <path d="M28.4444485,37.5872993H16.253952c-0.5615005,0-1.0159006,0.4543991-1.0159006,1.0158997
+		s0.4544001,1.0158997,1.0159006,1.0158997h12.1904964c0.5615025,0,1.0158005-0.4543991,1.0158005-1.0158997
+		S29.0059509,37.5872993,28.4444485,37.5872993z"/>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+</svg>
+                    </i>Copy Title
+                </button>
+                <button type="button" onclick="CopyToClipboard('template_data')" class="btn btn-primary btn-lg">
+                    <i>
+                        <svg height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<g id="Text-files">
+	<path d="M53.9791489,9.1429005H50.010849c-0.0826988,0-0.1562004,0.0283995-0.2331009,0.0469999V5.0228
+		C49.7777481,2.253,47.4731483,0,44.6398468,0h-34.422596C7.3839517,0,5.0793519,2.253,5.0793519,5.0228v46.8432999
+		c0,2.7697983,2.3045998,5.0228004,5.1378999,5.0228004h6.0367002v2.2678986C16.253952,61.8274002,18.4702511,64,21.1954517,64
+		h32.783699c2.7252007,0,4.9414978-2.1725998,4.9414978-4.8432007V13.9861002
+		C58.9206467,11.3155003,56.7043495,9.1429005,53.9791489,9.1429005z M7.1110516,51.8661003V5.0228
+		c0-1.6487999,1.3938999-2.9909999,3.1062002-2.9909999h34.422596c1.7123032,0,3.1062012,1.3422,3.1062012,2.9909999v46.8432999
+		c0,1.6487999-1.393898,2.9911003-3.1062012,2.9911003h-34.422596C8.5049515,54.8572006,7.1110516,53.5149002,7.1110516,51.8661003z
+		 M56.8888474,59.1567993c0,1.550602-1.3055,2.8115005-2.9096985,2.8115005h-32.783699
+		c-1.6042004,0-2.9097996-1.2608986-2.9097996-2.8115005v-2.2678986h26.3541946
+		c2.8333015,0,5.1379013-2.2530022,5.1379013-5.0228004V11.1275997c0.0769005,0.0186005,0.1504021,0.0469999,0.2331009,0.0469999
+		h3.9682999c1.6041985,0,2.9096985,1.2609005,2.9096985,2.8115005V59.1567993z"/>
+    <path d="M38.6031494,13.2063999H16.253952c-0.5615005,0-1.0159006,0.4542999-1.0159006,1.0158005
+		c0,0.5615997,0.4544001,1.0158997,1.0159006,1.0158997h22.3491974c0.5615005,0,1.0158997-0.4542999,1.0158997-1.0158997
+		C39.6190491,13.6606998,39.16465,13.2063999,38.6031494,13.2063999z"/>
+    <path d="M38.6031494,21.3334007H16.253952c-0.5615005,0-1.0159006,0.4542999-1.0159006,1.0157986
+		c0,0.5615005,0.4544001,1.0159016,1.0159006,1.0159016h22.3491974c0.5615005,0,1.0158997-0.454401,1.0158997-1.0159016
+		C39.6190491,21.7877007,39.16465,21.3334007,38.6031494,21.3334007z"/>
+    <path d="M38.6031494,29.4603004H16.253952c-0.5615005,0-1.0159006,0.4543991-1.0159006,1.0158997
+		s0.4544001,1.0158997,1.0159006,1.0158997h22.3491974c0.5615005,0,1.0158997-0.4543991,1.0158997-1.0158997
+		S39.16465,29.4603004,38.6031494,29.4603004z"/>
+    <path d="M28.4444485,37.5872993H16.253952c-0.5615005,0-1.0159006,0.4543991-1.0159006,1.0158997
+		s0.4544001,1.0158997,1.0159006,1.0158997h12.1904964c0.5615025,0,1.0158005-0.4543991,1.0158005-1.0158997
+		S29.0059509,37.5872993,28.4444485,37.5872993z"/>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+                            <g>
+</g>
+</svg>
+                    </i>Copy Template
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<p id="res"></p>
+
+<script>
+
+    function selectedchange(value) {
+        if (value == "HP Access Control") {
+            str = "<option selected=\"\">NA</option>" +
+                "<option>14.2</option>" +
+                "<option>15.0</option>" +
+                "<option>15.1</option>" +
+                "<option>15.2</option>" +
+                "<option>15.2.1</option>" +
+                "<option>15.2.2</option>" +
+                "<option>15.3</option>" +
+                "<option>15.3.1</option>" +
+                "<option>15.3.2</option>" +
+                "<option>15.3.3</option>" +
+                "<option>16.0</option>" +
+                "<option>16.1</option>" +
+                "<option>16.2</option>" +
+                "<option>16.3</option>" +
+                "<option>16.4</option>" +
+                "<option>16.5</option>" +
+                "<option>16.6</option>" +
+                "<option>16.7</option>" +
+                "<option>16.7.1</option>" +
+                "<option>16.8</option>" +
+                "<option>16.8.1</option>"
+        } else {
+            if (value == "HP Advance") {
+                str = "<option selected=\"\">NA</option>" +
+                    "<option>V1 R3.0.010</option>" +
+                    "<option>V1 R3.0.013</option>" +
+                    "<option>V1 R3.0.015</option>" +
+                    "<option>V1 R3.0.017</option>" +
+                    "<option>V1 R3.0.018</option>" +
+                    "<option>V1 R3.0.021</option>" +
+                    "<option>V1 R3.0.023</option>" +
+                    "<option>V1 R3.0.024</option>"
+
+            } else {
+                if (value == "HP Capture and Route") {
+                    str = "<option selected=\"\">NA</option>" +
+                        "<option>1.3.0</option>" +
+                        "<option>1.4.0</option>" +
+                        "<option>1.5.0</option>" +
+                        "<option>1.5.1</option>" +
+                        "<option>1.6.0</option>" +
+                        "<option>1.6.1</option>" +
+                        "<option>1.7.0</option>" +
+                        "<option>1.7.0 FP1</option>" +
+                        "<option>1.8.0</option>" +
+                        "<option>1.9.0</option>" +
+                        "<option>2.0.0</option>"
+                } else {
+                    if (value == "HP Web Jetadmin") {
+                        str = "<option selected=\"\">NA</option>" +
+                            "<option>8.1.3544</option>" +
+                            "<option>8.1.3638</option>" +
+                            "<option>8.1.3647</option>" +
+                            "<option>8.1.3661</option>" +
+                            "<option>8.1.3665</option>" +
+                            "<option>8.1.3674</option>" +
+                            "<option>8.1.3690</option>" +
+                            "<option>10.0.34060</option>" +
+                            "<option>10.0.36664</option>" +
+                            "<option>10.0.38258</option>" +
+                            "<option>10.0.41059</option>" +
+                            "<option>10.0.42691</option>" +
+                            "<option>10.0.46954</option>" +
+                            "<option>10.0.48068</option>" +
+                            "<option>10.0.49299</option>" +
+                            "<option>10.1.52747</option>" +
+                            "<option>10.1.53182</option>" +
+                            "<option>10.1.53575</option>" +
+                            "<option>10.1.54718</option>" +
+                            "<option>10.1.55407</option>" +
+                            "<option>10.1.56108</option>" +
+                            "<option>10.1.58563</option>" +
+                            "<option>10.1.60802</option>" +
+                            "<option>10.2.58560</option>" +
+                            "<option>10.2.59093</option>" +
+                            "<option>10.2.62227</option>" +
+                            "<option>10.2.63313</option>" +
+                            "<option>10.2.66860</option>" +
+                            "<option>10.2.71771</option>" +
+                            "<option>10.2.73942</option>" +
+                            "<option>10.2.74918</option>" +
+                            "<option>10.2.77156</option>" +
+                            "<option>10.2.80493</option>" +
+                            "<option>10.3.83654</option>" +
+                            "<option>10.3.85669</option>" +
+                            "<option>10.3.86392</option>" +
+                            "<option>10.3.88120</option>" +
+                            "<option>10.3.90613</option>" +
+                            "<option>10.3.91358</option>" +
+                            "<option>10.3.93671</option>" +
+                            "<option>10.3.93994</option>" +
+                            "<option>10.3.96073</option>" +
+                            "<option>10.4.98174</option>" +
+                            "<option>10.4.99186</option>" +
+                            "<option>10.4.99821</option>" +
+                            "<option>10.4.101715</option>" +
+                            "<option>10.4.101899</option>" +
+                            "<option>10.4.101995</option>" +
+                            "<option>10.4.103054</option>" +
+                            "<option>10.4.103287</option>" +
+                            "<option>10.4.104106</option>" +
+                            "<option>10.4.105723</option>" +
+                            "<option>10.4.106526</option>" +
+                            "<option>10.4.109068</option>" +
+                            "<option>10.4.110153</option>" +
+                            "<option>10.4.110231</option>" +
+                            "<option>10.4.111315</option>" +
+                            "<option>10.5.112785</option>" +
+                            "<option>10.5.113341</option>" +
+                            "<option>10.5.114213</option>" +
+                            "<option>10.5.114911</option>";
+                    } else {
+                        if (value == "HP JetAdvantage Security Manager") {
+                            str = "<option selected=\"\">NA</option>" +
+                                "<option>2.1.0.11940</option>" +
+                                "<option>2.1.0.11952</option>" +
+                                "<option>2.1.0.12023</option>" +
+                                "<option>2.1.1.33391</option>" +
+                                "<option>2.1.2.36831</option>" +
+                                "<option>2.1.4.39777</option>" +
+                                "<option>2.1.4.40515</option>" +
+                                "<option>2.1.5.43780</option>" +
+                                "<option>2.1.5.44493</option>" +
+                                "<option>2.1.5.49622</option>" +
+                                "<option>2.1.5.56486</option>" +
+                                "<option>3.0.0.55479</option>" +
+                                "<option>3.0.1.59138</option>" +
+                                "<option>3.1.0.65238</option>" +
+                                "<option>3.2.0.8389</option>" +
+                                "<option>3.2.1.12050</option>" +
+                                "<option>3.2.1.12855</option>" +
+                                "<option>3.3.0.15855</option>" +
+                                "<option>3.4.0.16986</option>" +
+                                "<option>3.5.0.19036</option>" +
+                                "<option>3.5.1.19514</option>" +
+                                "<option>3.6.0.20307</option>" +
+                                "<option>3.6.1.20676</option>" +
+                                "<option>3.7.0.21144</option>" +
+                                "<option>3.7.1.21413</option>";
+                        } else {
+                            str = "<option selected=\"\">NA</option>";
+                        }
+                    }
+                }
+            }
+        }
+        document.getElementById("solution_version").innerHTML = str;
+        var Connectivity = ["HP Web Jetadmin", "HP JetAdvantage Security Manager", "Connectivity"]
+        var Third_party = ["equitrac", "Troy", "Genius Bytes", "AutoStore", "Kofax", "Pharos", "Safecom", "Ysoft"]
+        var Cloud = ["Celiveo", "HP PrinterOn", "Everyone Print", "HP Capture and Route", "DSS", "WorkPath", "HP Roam",
+            "Paper Cut", "Accuroute", "DCC", "E-print Enterprise"]
+        var Pull_print = ["HP Access Control", "HP Advance", "HP Jet Advantage Secure Print & Insights"]
+        var Related_To_Solutions = ["Badge Reader"]
+
+
+        var Cloud_pull_print = ["Celiveo", "HP Capture and Route"]
+        var Cloud_connectivity = ["HP PrinterOn", "HP Capture and Route"]
+        var Cloud_command_center = ["Everyone Print"]
+
+        document.getElementById('fw_version').selectedIndex = 0
+        document.getElementById('fw_version').disabled = false;
+
+
+        if (Connectivity.find(element => element.toLowerCase() == value.toLowerCase())) {
+            document.getElementById("version_type_txt").value = "Connectivity";
+            document.getElementById('fw_version').selectedIndex = 3
+            document.getElementById('fw_version').disabled = true;
+
+        } else {
+            if (Third_party.find(element => element.toLowerCase() == value.toLowerCase())) {
+                document.getElementById("version_type_txt").value = "Third-party";
+            } else {
+                if (Cloud.find(element => element.toLowerCase() == value.toLowerCase())) {
+                    document.getElementById("version_type_txt").value = "Cloud";
+                    if (Cloud_pull_print.concat(Cloud_connectivity).concat(Cloud_command_center).find(element => element.toLowerCase() == value.toLowerCase())) {
+                        document.getElementById("version_type_txt").value += " (";
+                        if (Cloud_pull_print.find(element => element.toLowerCase() == value.toLowerCase())) {
+                            document.getElementById("version_type_txt").value += " pull print";
+                        }
+                        if (Cloud_connectivity.find(element => element.toLowerCase() == value.toLowerCase())) {
+                            document.getElementById("version_type_txt").value += " connectivity";
+                            document.getElementById('fw_version').selectedIndex = 3
+                            document.getElementById('fw_version').disabled = true;
+                        }
+                        if (Cloud_command_center.find(element => element.toLowerCase() == value.toLowerCase())) {
+                            document.getElementById("version_type_txt").value += " command center";
+                        }
+
+                        document.getElementById("version_type_txt").value += " )";
+                    }
+
+                } else {
+                    if (Pull_print.find(element => element.toLowerCase() == value.toLowerCase())) {
+                        document.getElementById("version_type_txt").value = "Pull print";
+                    } else {
+                        if (Related_To_Solutions.find(element => element.toLowerCase() == value.toLowerCase())) {
+                            document.getElementById("version_type_txt").value = "Related To Solutions";
+                        } else {
+                            document.getElementById("version_type_txt").value = "NA"
+                        }
+                    }
+                }
+            }
+        }
+        $('#fw_version').trigger('change');
+
+    }
+
+
+    $(".js-example-tags").select2({
+        tags: true
+    });
+    $(".js-example-basic-single").select2({});
+
+    function CopyToClipboard(id) {
+        var r = document.createRange();
+        r.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        alert("Template has been copied")
+    }
+
+    function resetForm() {
+        document.getElementById("form_template").reset();
+        $(".select").val('').trigger('change')
+    }
+
+
+    function modalReady() {
+        document.getElementById("form_template")
+        setTitle()
+        setContent()
+    }
+
+    function setTitle() {
+        let case_title ="ByMail | "+document.getElementById("solution_name").value + ' | ' +
+            document.getElementById("solution_version").value + ' | ' +
+            document.getElementById("country").value + ' | ' +
+            document.getElementById("issue_desc").value + ' | ' +
+            document.getElementById("from-ats").value
+
+        $('#template_title').html(case_title)
+    }
+
+
+
+    function setContent() {
+        let template_content_value = "Contact details: " + "<br/>" + "<br/>"
+
+        template_content_value +=
+            "SAID: " + document.getElementById("said_txt").value + "<br/>" + "<br/>" +
+
+            "Name: " + document.getElementById("name_txt").value + "<br/>" + "<br/>" +
+
+            "Email: " + document.getElementById("email_txt").value + "<br/>" + "<br/>" +
+
+            "Phone: " + document.getElementById("phone_txt").value + "<br/>" + "<br/>" +
+
+            "Solution Name: " + document.getElementById("solution_name").value + "<br/>" + "<br/>" +
+            "Solution Version: " + document.getElementById("solution_version").value + "<br/>" + "<br/>" +
+            "Issue Description: " + document.getElementById("issue_desc").value + "<br/>" + "<br/>" +
+            "Printer: " + document.getElementById("printer_txt").value + "<br/>" + "<br/>" +
+            document.getElementById("fw_version").value + "<br/>" + "<br/>" +
+
+            "Troubleshoot done by the Customer/Partner:" + "<br/>" + "<br/>" +
+
+            document.getElementById("troubleshoot").value + "<br/>" + "<br/>" + "<br/>" +
+
+
+            "First Installation: " + document.getElementById("first_install").value + "<br/>" + "<br/>"
+
+
+        $('#template_data').html(template_content_value)
+    }
+
+
+</script>
+<link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script>
+    const phoneInputField = document.querySelector("#phone_txt");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        preferredCountries: ["tn", "us", "fr", "de"],
+        allowDropdown: true,
+        autoHideDialCode: false,
+        nationalMode: false,
+        utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+</script>
+
+</body>
+</html>
+
