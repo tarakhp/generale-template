@@ -48,7 +48,7 @@
                     <div class="card bg-light">
                         <div class="card-header" style="color: #0096D6;">
                             <h4 class="mb-0">
-                                <b> In scope <br>OR<br> Not in scope :<br>
+                                <b> By mail <br>OR<br> By phone :<br>
                                 </b>
                             </h4>
                         </div>
@@ -71,7 +71,7 @@
                                                             <label class="form-check-label" style="font-size: 22px"
                                                                    class="col-sm-4"
                                                                    for="update_radio1">
-                                                                In scope
+                                                                By mail
                                                             </label>
                                                         </td>
 
@@ -95,7 +95,7 @@
                                                             <label class="form-check-label" style="font-size: 22px"
                                                                    class="col-sm-4"
                                                                    for="update_radio2">
-                                                                Not in scope
+                                                                By phone
                                                             </label>
                                                         </td>
 
@@ -152,9 +152,9 @@
         });
         console.log(type)
         if (type == 1) {
-            window.location.assign('not-in-scope.html')
+            window.location.assign('quick-case-by-phone.html')
         } else {
-            window.location.assign('init-info.html')
+            window.location.assign('quick-case.html')
         }
     }
 
