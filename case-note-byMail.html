@@ -60,7 +60,7 @@
                                         <label for="email_txt" class="col-sm-2 col-form-label">Email:</label>
                                         <div class="col-sm-10">
                                             <input type="email" placeholder="Contact’s email" class="form-control"
-                                                   id="email_txt">
+                                                   id="email_txt" onchange="mailChanged()">
                                         </div>
                                     </div>
 
@@ -382,10 +382,16 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="form-group" id="section2_2" hidden="hidden">
+                    <div class="card bg-light">
+                            <h1 class="mb-0">
+                                <b>Please follow the RMS process</b>
+                            </h1>
+                    </div>
+                </div>
 
                 <!--Troubleshoot-->
-                <div class="form-group">
+                <div class="form-group" id="section2_1">
                     <div class="card bg-light">
                         <div class="card-header" style="color: #0096D6;">
                             <h4 class="mb-0">
@@ -794,6 +800,23 @@
 <p id="res"></p>
 
 <script>
+    function mailChanged(){
+        list=["leonardo.alfaro@hp.com","delis.alvarado@hp.com","elisa.amador@hp.com","bernal.barrantes.sequeira@hp.com",
+            "jose.barrantes.arias@hp.com", "michael.cerdas.sanchez1@hp.com", "paola.chavesherrera@hp.com",
+            "greivin.hernandez@hp.com", "joshua.jimnez-leitn@hp.com", "raquel.miranda@hp.com",
+            "jessica.mora-gamboa@hp.com", "omora@hp.com", "josue.moreira.brenes@hp.com",
+            "luis.gustavo.oconitrillo.solorzano@hp.com", "ericka.perez.chinchilla@hp.com",
+            "silvia.rivera.monestel@hp.com", "isaac.rodriguez.mena@hp.com", "gabriel.sandoval-solano@hp.com",
+            "emmanuel.valverde.herrera@hp.com"]
+        console.log(document.getElementById('email_txt').value)
+        if(list.find(mail => mail===document.getElementById('email_txt').value)===undefined){
+            document.getElementById('section2_1').hidden=false;
+            document.getElementById('section2_2').hidden=true;
+        }else{
+            document.getElementById('section2_1').hidden=true;
+            document.getElementById('section2_2').hidden=false;
+        }
+    }
 
     function setCountry() {
         if(document.getElementById('country').value=="Germany" ||document.getElementById('country').value=="Austria" ||document.getElementById('country').value=="Switzerland" ){
