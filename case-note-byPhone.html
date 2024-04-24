@@ -1078,7 +1078,6 @@
 
     function setContent() {
         let h=new Date()
-        h.setHours(h.getHours()+1)
         let template_content_value = "Contact details: " + "<br/>" + "<br/>"
 
         template_content_value +=
@@ -1100,7 +1099,7 @@
 
             document.getElementById("troubleshoot").value + "<br/>" + "<br/>" + "<br/>" +
 
-            "Time stamp: " + h.toISOString().split('T')[0]+" "+h.toISOString().split('T')[1].split('.')[0] + "<br/>" + "<br/>" +
+            "Time stamp (UTC+0): " + h.toISOString().split('T')[0]+" "+h.toISOString().split('T')[1].split('.')[0] + "<br/>" + "<br/>" +
 
 
             "First Installation: " + document.getElementById("first_install").value + "<br/>" + "<br/>"
